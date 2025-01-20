@@ -1,0 +1,4 @@
+.vantage
+.env/
+dist/
+node_modules/

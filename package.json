@@ -1,0 +1,22 @@
+{
+  "name": "www.businesstime.team",
+  "version": "1.0.0",
+  "description": "The public website www.businesstime.team",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BusinessTimeTeam/www.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BusinessTimeTeam/www/issues"
+  },
+  "homepage": "https://github.com/BusinessTimeTeam/www#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
