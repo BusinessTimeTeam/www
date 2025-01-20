@@ -6,10 +6,6 @@
 #   workdir: /workdir
 #   volume:
 #     - $VG_APP_DIR:/workdir
-#   publish:
-#     - $PUBLISH
-# environment:
-#   PUBLISH: 8000
 # ---
 set -eu
 npm "${@:---help}"
