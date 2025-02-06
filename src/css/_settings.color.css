@@ -12,12 +12,14 @@
 
   --color-taupe: #b5a7a1;
   --color-gray: #77777b;
+  --color-sand: #d9cec5;
+  --color-slate: #4a494f;
 
   --color-bg: var(--color-cream);
   --color-heading: var(--color-taupe);
   --color-text: var(--color-ink);
   --color-link: var(--color-red);
-  --color-border: var(--color-taupe);
+  --color-border: var(--color-sand);
   --color-marker: var(--color-red);
 
   @media (--mq-scheme-dark) {
@@ -25,7 +27,7 @@
     --color-heading: var(--color-gray);
     --color-text: var(--color-white);
     --color-link: var(--color-red);
-    --color-border: var(--color-gray);
+    --color-border: var(--color-slate);
     --color-marker: var(--color-red);
   }
 }
