@@ -33,13 +33,21 @@
   color: var(--color-text);
   display: flex;
   gap: var(--size-md);
+  list-style-type: none;
 
-  & li:first-child::marker {
-    color: transparent;
+  & li {
+    position: relative;
   }
 
-  & li::marker {
-    color: var(--color-marker);
+  & li:not(:first-child)::before {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 10"%3E%3Cpath fill="url(%23a)" fill-rule="evenodd" d="M5 10a5 5 0 0 0-5-5 5 5 0 0 0 5-5 5 5 0 0 0 5 5 5 5 0 0 0-5 5Z" clip-rule="evenodd"/%3E%3Cdefs%3E%3CradialGradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(0 5 -5 0 5 5)" gradientUnits="userSpaceOnUse"%3E%3Cstop stop-color="%23FFA11F"/%3E%3Cstop offset=".545" stop-color="%23FD4B15"/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E');
+    content: "";
+    display: block;
+    height: 0.625rem;
+    left: -1.125rem;
+    position: absolute;
+    top: calc(50% - 0.3125rem);
+    width: 0.625rem;
   }
 
   & a {
