@@ -16,8 +16,7 @@
 
 .site-footer__logo {
   & a {
-    color: var(--color-link);
-    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
     text-decoration-color: transparent;
     text-decoration-thickness: 0.1em;
     text-transform: uppercase;
