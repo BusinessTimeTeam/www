@@ -1,0 +1,4 @@
+.wrapper {
+  margin-inline: auto;
+  max-width: clamp(0px, 90vw, 64rem); /* 1024px */
+}

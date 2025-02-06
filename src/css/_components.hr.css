@@ -1,0 +1,5 @@
+.hr {
+  background-color: var(--color-border);
+  border: var(--size-0);
+  height: var(--size-px);
+}

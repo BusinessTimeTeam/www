@@ -1,0 +1,4 @@
+.list-none {
+  list-style-type: none;
+  padding-inline: var(--size-0);
+}

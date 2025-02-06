@@ -1,0 +1,12 @@
+.image-width-buster {
+  margin-inline: -5vw;
+  text-align: center;
+
+  & img {
+    max-width: clamp(0px, 100%, 64rem); /* 1024px */
+  }
+}
+
+.image-profile {
+  max-width: 84%;
+}

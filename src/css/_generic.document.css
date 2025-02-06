@@ -1,0 +1,35 @@
+html {
+  color-scheme: dark light;
+  overflow-x: hidden;
+  scroll-padding-top: var(--size-xl);
+
+  @media (--mq-motion-ok) {
+    scroll-behavior: smooth;
+  }
+
+  @media (--mq-min-width-sm) {
+    scroll-padding-top: var(--size-3xl);
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: grid;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-style: normal;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  grid-template-rows: auto 1fr auto;
+  gap: var(--size-xl);
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+
+  @media (--mq-min-width-sm) {
+    gap: var(--size-3xl);
+  }
+}

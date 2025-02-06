@@ -1,0 +1,14 @@
+<footer id="footer">
+  <div class="wrapper">
+    <div class="site-footer">
+      {% set buildDate = site.buildDate | formatDateISO %}
+      <div class="site-footer__logo">&copy; {{ buildDate.slice(0, 4) }} <a href="/">BusinessTime</a></div>
+      <nav>
+        <ul class="site-footer__nav">
+          <li><a href="/cookies/">Cookies</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>

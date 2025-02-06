@@ -1,0 +1,43 @@
+@layer settings, generic, objects, components, utilities;
+
+@import "_settings.color.css" layer(settings);
+@import "_settings.font.css" layer(settings);
+@import "_settings.mq.css";
+@import "_settings.size.css" layer(settings);
+
+@import "_generic.box-sizing.css" layer(generic);
+@import "_generic.document.css" layer(generic);
+@import "_generic.font-face.css" layer(generic);
+@import "_generic.leading-trim.css" layer(generic);
+@import "_generic.reset.css" layer(generic);
+
+@import "_objects.columns.css" layer(objects);
+@import "_objects.stack.css" layer(objects);
+@import "_objects.wrapper.css" layer(objects);
+
+@import "_components.heading.css" layer(components);
+@import "_components.hr.css" layer(components);
+@import "_components.image.css" layer(components);
+@import "_components.link.css" layer(components);
+@import "_components.list.css" layer(components);
+@import "_components.richtext.css" layer(components);
+@import "_components.site-footer.css" layer(components);
+@import "_components.site-header.css" layer(components);
+@import "_components.skip-link.css" layer(components);
+@import "_components.text.css" layer(components);
+
+@import "_utilities.color.css" layer(utilities);
+@import "_utilities.display.css" layer(utilities);
+@import "_utilities.gap.css" layer(utilities);
+@import "_utilities.layout.css" layer(utilities);
+@import "_utilities.typography.css" layer(utilities);
+
+/* a11y overrides */
+@media (--mq-motion-reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s;
+    transition: none;
+  }
+}

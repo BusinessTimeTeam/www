@@ -1,0 +1,25 @@
+.gap-md {
+  gap: var(--size-md);
+}
+
+.gap-lg {
+  gap: var(--size-lg);
+}
+
+.gap-xl {
+  gap: var(--size-xl);
+}
+
+.gap-3xl {
+  gap: var(--size-3xl);
+}
+
+.gap-y-2xl {
+  row-gap: var(--size-2xl);
+}
+
+@media (--mq-min-width-sm) {
+  .sm\:gap-3xl {
+    gap: var(--size-3xl);
+  }
+}

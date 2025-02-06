@@ -1,0 +1,54 @@
+:root {
+  /* 
+  Urbanist Font Metrics
+  https://seek-oss.github.io/capsize/
+  */
+  --cap-height: 1400;
+  --ascender: 1900;
+  --descender: -500;
+  --units-per-em: 1800;
+}
+
+/* Future support */
+@supports (text-edge: alphabetic) and (leading-trim: both) {
+  :is(.h1, .h2, .h3),
+  :is(.ol, .ul),
+  .text {
+    text-edge: cap alphabetic;
+    leading-trim: both;
+  }
+}
+
+/* Legacy support */
+@supports (not (text-edge: alphabetic)) and (not (leading-trim: both)) {
+  :is(.h1, .h2, .h3),
+  :is(.ol, .ul),
+  .text {
+    --content-area: calc(var(--ascender) + var(--descender) * -1);
+    --line-height-scale: calc(var(--line-height) * var(--units-per-em));
+    --half-leading: calc((var(--line-height-scale) - var(--content-area)) / 2);
+    --start-adjust: calc((var(--ascender) - var(--cap-height) + var(--half-leading)) / var(--units-per-em) * -1em);
+    --end-adjust: calc((var(--descender) * -1 + var(--half-leading)) / var(--units-per-em) * -1em);
+
+    display: flow-root;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+    }
+
+    &::before {
+      margin-block-start: var(--start-adjust);
+    }
+
+    &::after {
+      margin-block-end: var(--end-adjust);
+    }
+
+    & &::before,
+    & &::after {
+      content: none;
+    }
+  }
+}

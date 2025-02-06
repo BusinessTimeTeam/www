@@ -1,0 +1,6 @@
+.stack {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}

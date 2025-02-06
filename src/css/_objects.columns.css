@@ -1,0 +1,32 @@
+.columns {
+  align-items: start;
+  display: grid;
+}
+
+.columns--cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.columns--cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (--mq-min-width-xs) {
+  .xs\:columns--cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (--mq-min-width-sm) {
+  .sm\:columns--cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:columns--cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .sm\:columns__col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+}

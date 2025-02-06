@@ -1,0 +1,28 @@
+/* https://fluid.style/ */
+
+:is(.h1, .h2, .h3) {
+  --color: var(--color-heading);
+  --font-size: 1.125rem; /* 18px */
+  --font-weight: var(--font-weight-normal);
+  --line-height: var(--font-line-height-sm);
+
+  color: var(--color);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  text-wrap: balance;
+}
+
+.h1 {
+}
+
+.h2 {
+  --font-size: clamp(0.875rem, 4px + 1.563vw, 1.25rem); /* 14px - 20px */
+  --font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
+.h3 {
+  --color: var(--color-text);
+  --font-size: 1.875rem; /* 30px */
+}

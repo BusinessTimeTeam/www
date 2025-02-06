@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" dir="{{ dir }}" lang="{{ locale }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{ title }} | {{ site.title }}</title>
+
+    <script>
+      (function (d) {
+        d.classList.remove("no-js");
+        d.classList.add("js");
+      })(document.documentElement);
+    </script>
+
+    {% if site.runMode == "build" %}
+    <script defer src="https://api.pirsch.io/pa.js" id="pianjs" data-code="JWnuDdmgeHkMUy34CCO2gPlV0Kn4bGma"></script>
+    {% endif %}
+
+    <link href="/css/main.css" rel="stylesheet" />
+
+    <link rel="preload" href="/fonts/urbanist-regular.woff2" crossorigin as="font" type="font/woff2" />
+
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="canonical" href="{{ site.url + page.url }}" />
+
+    <meta name="description" content="{{ description or site.description }}" />
+    <meta name="generator" content="{{ eleventy.generator }}" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#120d2d" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcf5ea" />
+    <meta name="theme-color" content="#fcf5ea" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ title }} — {{ site.title }}" />
+    <meta name="twitter:description" content="{{ description or site.description }}" />
+    {#
+    <meta name="twitter:image" content="{{ imageUrl }}" />
+    #}
+    <meta name="twitter:creator" content="@BusinessTime" />
+    <meta property="og:title" content="{{ title }} — {{ site.title }}" />
+    <meta property="og:description" content="{{ description or site.description }}" />
+    {#
+    <meta property="og:image" content="{{ imageUrl }}" />
+    #}
+    <meta property="og:url" content="{{ site.url + page.url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+  </head>
+  <body tabindex="-1">
+    {% include "partials/site-header.html" %}
+
+    <main id="main" tabindex="-1">{{ content | safe }}</main>
+
+    {% include "partials/site-footer.html" %}
+  </body>
+</html>

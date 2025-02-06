@@ -1,0 +1,26 @@
+/* https://fluid.style/ */
+
+:is(.ol, .ul) {
+  --font-size: 1.125rem; /* 18px */
+  --line-height: var(--font-line-height-xl);
+
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  padding-inline-start: 1em;
+  text-wrap: pretty;
+}
+
+:is(.ol, .ul) li:not(:first-child),
+li :is(.ol, .ul) {
+  margin-block-start: 0.8em;
+}
+
+:is(.ol--lg, .ul--lg) {
+  --font-size: clamp(1.5rem, -0.5833125rem + 5.208vw, 2.75rem);
+  --line-height: var(--font-line-height-sm);
+}
+
+:is(.ol--lg, .ul--lg) li:not(:first-child),
+li :is(.ol--lg, .ul--lg) {
+  margin-block-start: 0.4em;
+}

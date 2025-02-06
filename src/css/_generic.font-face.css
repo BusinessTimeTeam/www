@@ -1,0 +1,24 @@
+/*
+https://www.glyphrstudio.com/app/
+https://www.fontsquirrel.com/tools/webfont-generator
+*/
+
+@font-face {
+  font-display: swap;
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/fonts/urbanist-regular.woff2") format("woff2"),
+    url("/fonts/urbanist-regular.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("/fonts/urbanist-bold.woff2") format("woff2"),
+    url("/fonts/urbanist-bold.woff") format("woff");
+}

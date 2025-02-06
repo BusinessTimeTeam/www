@@ -1,0 +1,19 @@
+* {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-style: italic;
+  height: auto;
+  max-width: 100%;
+  shape-margin: 1rem;
+  vertical-align: middle;
+}

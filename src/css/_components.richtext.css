@@ -1,0 +1,96 @@
+.richtext {
+  margin-inline: auto;
+  max-width: clamp(0px, 90vw, 65ch);
+}
+
+/* Layout */
+.richtext * + :is(h1, h2, h3, h4, h5, h6) {
+  margin-block-start: 1.5em;
+}
+
+.richtext :is(h1, h2, h3, h4, h5, h6) + :is(h1, h2, h3, h4, h5, h6) {
+  margin-block-start: 0.5em;
+}
+
+.richtext * + :is(p, ul, ol) {
+  margin-block-start: 1em;
+}
+
+.richtext :is(ol, ul) {
+  padding-inline-start: 1em;
+}
+
+.richtext :is(ol, ul) li:not(:first-child),
+.richtext li :is(ol, ul) {
+  margin-block-start: 0.8em;
+}
+
+.richtext > * + :is(blockquote, figure, iframe, img, picture, pre, table) {
+  margin-block-start: var(--size-xl);
+
+  &:not(:last-child) {
+    margin-block-end: var(--size-xl);
+  }
+}
+
+/* Typography */
+.richtext :is(h1, h2, h3, h4, h5, h6) {
+  --font-size: 1.125rem; /* 18px */
+  --font-weight: var(--font-weight-bold);
+  --line-height: var(--font-line-height-sm);
+
+  color: var(--color-heading);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  text-wrap: balance;
+}
+
+.richtext h1 {
+  --font-size: clamp(2.375rem, 1.75rem + 1.563vw, 2.75rem); /* 38px - 44px */
+}
+
+.richtext h2 {
+  --font-size: clamp(1.875rem, 1.25rem + 1.563vw, 2.25rem); /* 30px - 36px */
+}
+
+.richtext h3 {
+  --font-size: clamp(1.375rem, 0.75rem + 1.563vw, 1.75rem); /* 22px - 28px */
+}
+
+.richtext h4 {
+  --font-size: clamp(1rem, 0.5833125rem + 1.042vw, 1.25rem); /* 16px - 20px */
+  text-transform: uppercase;
+}
+
+.richtext h5 {
+  --font-size: clamp(0.9375rem, 0.625rem + 0.781vw, 1.125rem); /* 15px - 18px */
+  text-transform: uppercase;
+}
+
+.richtext h6 {
+  --font-size: clamp(0.875rem, 0.6666875rem + 0.521vw, 1rem); /* 14px - 16px */
+  text-transform: uppercase;
+}
+
+.richtext :is(p, ul, ol) {
+  font-size: 1.125rem; /* 18px */
+  line-height: var(--font-line-height-xl);
+  text-wrap: pretty;
+}
+
+.richtext :where(:is(p, ul, ol) a) {
+  color: var(--color-link);
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 0.15s;
+
+  &:hover {
+    text-decoration-color: var(--color-link);
+  }
+}
+
+.richtext * strong {
+  font-weight: var(--font-weight-bold);
+}

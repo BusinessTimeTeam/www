@@ -1,0 +1,24 @@
+{
+  "name": "BusinessTime",
+  "short_name": "BusinessTime",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fcf5ea",
+  "theme_color": "#120d2d",
+  "description": "An experienced and friendly collective of freelancers who plan, design, build and maintain websites for clients large and small.",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "purpose": "any maskable",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "purpose": "any maskable",
+      "type": "image/png"
+    }
+  ]
+}
