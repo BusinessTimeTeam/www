@@ -22,5 +22,5 @@ li :is(.ol, .ul) {
 
 :is(.ol--lg, .ul--lg) li:not(:first-child),
 li :is(.ol--lg, .ul--lg) {
-  margin-block-start: 0.4em;
+  margin-block-start: 0.6em;
 }
