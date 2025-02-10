@@ -4,7 +4,7 @@ const lightningcss = require('lightningcss');
 const htmlmin = require('html-minifier');
 const packageJson = require('./package.json');
 
-async function imageShortcode(alt, primarySrc, secondarySrc, primaryMedia, secondaryMedia) {
+async function imageShortcode(alt, primarySrc, secondarySrc, primaryMedia, secondaryMedia, loading = "lazy") {
     const formats = ["avif", "webp", "png", "jpeg", "svg"];
     const widths = [400, 800, 1200];
 
@@ -67,12 +67,12 @@ async function imageShortcode(alt, primarySrc, secondarySrc, primaryMedia, secon
     let fallbackImgTag;
     if (secondaryMetadata) {
         // Use a responsive fallback: include both images in srcset with the computed sizes.
-        fallbackImgTag = `<img loading="lazy" decoding="async" alt="${alt}"
+        fallbackImgTag = `<img loading="${loading}" decoding="async" alt="${alt}"
        src="${fallbackPrimary.url}"
        srcset="${fallbackSecondary.url} ${fallbackSecondary.width}w, ${fallbackPrimary.url} ${fallbackPrimary.width}w"
        sizes="${fallbackSizes}">`;
     } else {
-        fallbackImgTag = `<img loading="lazy" decoding="async" alt="${alt}" 
+        fallbackImgTag = `<img loading="${loading}" decoding="async" alt="${alt}" 
        src="${fallbackPrimary.url}" 
        width="${fallbackPrimary.width}" 
        height="${fallbackPrimary.height}">`;
