@@ -7,10 +7,6 @@
   grid-template-columns: 1fr;
 }
 
-.columns--cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 @media (--mq-min-width-xs) {
   .xs\:columns--cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
