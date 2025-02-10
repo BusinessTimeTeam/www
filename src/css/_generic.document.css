@@ -1,5 +1,6 @@
 html {
   color-scheme: dark light;
+  height: 100%;
   overflow-x: hidden;
   scroll-padding-top: var(--size-xl);
 
@@ -23,7 +24,7 @@ body {
   -webkit-font-smoothing: antialiased;
   grid-template-rows: auto 1fr auto;
   gap: var(--size-xl);
-  min-height: 100vh;
+  min-height: 100%;
   text-rendering: optimizeLegibility;
   transition:
     background-color 0.15s,
