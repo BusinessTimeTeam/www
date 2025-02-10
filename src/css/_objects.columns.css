@@ -7,10 +7,6 @@
   grid-template-columns: 1fr;
 }
 
-.columns--cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 @media (--mq-min-width-xs) {
   .xs\:columns--cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -18,12 +14,16 @@
 }
 
 @media (--mq-min-width-sm) {
-  .sm\:columns--cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .sm\:columns--cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .sm\:columns--cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .sm\:columns__col-span-2 {
+    grid-column: span 2 / span 2;
   }
 
   .sm\:columns__col-span-3 {
