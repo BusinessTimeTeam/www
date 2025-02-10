@@ -3,3 +3,32 @@
   border: var(--size-0);
   height: var(--size-px);
 }
+
+.hr-wave {
+  --stretch: 1.125rem; /* Wave stretch factor (18px) */
+  --thickness: 0.125rem; /* Line thickness (2px) */
+  --curve: 0.8; /* Wave curvature factor */
+
+  mask:
+    radial-gradient(
+        calc(var(--stretch) * sqrt(var(--curve) * var(--curve) + 1) + var(--thickness) / 2) at left 50% bottom
+          calc(-1 * var(--curve) * var(--stretch)),
+        transparent calc(99% - var(--thickness)),
+        #000 calc(101% - var(--thickness)) 99%,
+        transparent 101%
+      )
+      calc(50% - 2 * var(--stretch)) calc(50% - (var(--stretch) / 2 + var(--thickness) / 2)) / calc(4 * var(--stretch))
+      calc(var(--stretch) + var(--thickness)) repeat-x,
+    radial-gradient(
+        calc(var(--stretch) * sqrt(var(--curve) * var(--curve) + 1) + var(--thickness) / 2) at left 50% top
+          calc(-1 * var(--curve) * var(--stretch)),
+        transparent calc(99% - var(--thickness)),
+        #000 calc(101% - var(--thickness)) 99%,
+        transparent 101%
+      )
+      50% calc(50% + (var(--stretch) / 2 + var(--thickness) / 2)) / calc(4 * var(--stretch))
+      calc(var(--stretch) + var(--thickness)) repeat-x;
+
+  background: linear-gradient(90deg, var(--color-blue), var(--color-red), var(--color-orange), var(--color-sky));
+  height: 1.3125rem; /* 21px */
+}
