@@ -4,7 +4,7 @@
   height: var(--size-px);
 }
 
-.hr-wave {
+.hr--wave {
   --stretch: 1.125rem; /* Wave stretch factor (18px) */
   --thickness: 0.125rem; /* Line thickness (2px) */
   --curve: 0.8; /* Wave curvature factor */
@@ -28,7 +28,5 @@
       )
       50% calc(50% + (var(--stretch) / 2 + var(--thickness) / 2)) / calc(4 * var(--stretch))
       calc(var(--stretch) + var(--thickness)) repeat-x;
-
-  background: linear-gradient(90deg, var(--color-blue), var(--color-red), var(--color-orange), var(--color-sky));
   height: 1.3125rem; /* 21px */
 }
