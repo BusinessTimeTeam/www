@@ -1,5 +1,4 @@
 .site-footer {
-  border-block-start: var(--size-px) solid var(--color-border);
   display: grid;
   font-size: 1.125rem; /* 18px */
   grid-template-columns: 1fr;
