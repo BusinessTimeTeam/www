@@ -4,7 +4,8 @@
   --font-weight-normal: 400;
   --font-weight-bold: 700;
 
-  --font-line-height-none: 1;
+  --font-line-height-none: 0;
+  --font-line-height-2xs: 1;
   --font-line-height-xs: 1.1;
   --font-line-height-sm: 1.2;
   --font-line-height-md: 1.3;
